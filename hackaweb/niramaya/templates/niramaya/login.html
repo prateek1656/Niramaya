@@ -1,0 +1,46 @@
+{% extends 'niramaya/basic.html' %} {% block tittle %} Register the hospital {%endblock %} {% block body %}
+
+<div class="login-form" role="document" style="width: 60%; margin: 50px auto">
+  <div class="rounded-5 shadow">
+    <div class="p-5 pb-4 border-bottom-0">
+      <h2 class="fw-bold mb-0 text-center">Login to your Account</h2>
+    </div>
+
+    <div class="p-5 pt-0">
+      <form action="./handelLogin" method="post">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-control rounded-4"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Enter username</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="password"
+            type="password"
+            id="password"
+            name="password"
+            class="form-control rounded-4"
+            placeholder="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="container text-center">
+          <button
+            class="mb-2 btn btn-lg btn-primary btn-round-full"
+            type="submit"
+          >
+            Log In
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {%block js%}{%endblock%}

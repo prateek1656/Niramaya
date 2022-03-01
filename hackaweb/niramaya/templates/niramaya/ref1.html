@@ -1,0 +1,307 @@
+{% extends 'niramaya/basic.html' %}
+
+{% block tittle %}
+
+Register the hospital
+
+{% endblock %}
+{% block body %}
+
+<div id="top" style="width: auto; margin: 50px auto;">
+  <section class="patientDetails">
+    <div class="patientform" style='margin: 50px auto; text-align: center;'>
+      <h3 class="font-weight-bold mb-5">Search Hospitals For Refer </h3>
+      <form action="./search" method="post">{% csrf_token %}
+        <div class="required">
+          <div class="beds" style="text-align:left">
+            <p>Beds:</p>
+              <input type="checkbox" id="Q_branch_available_gen_beds" name="Q_branch_available_gen_beds" value=True>
+              <label for="Q_branch_available_gen_beds">General Beds</label><br>
+              <input type="checkbox" id="Q_branch_available_spec_beds" name="Q_branch_available_spec_beds" value=True>
+              <label for="Q_branch_available_spec_beds">Special Beds</label><br>
+              <input type="checkbox" id="Q_branch_available_srg_beds" name="Q_branch_available_srg_beds" value=True>
+              <label for="Q_branch_available_srg_beds">Surgical Beds</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Labs:</p>
+              <input type="checkbox" id="Q_Lab_chem" name="Q_Lab_chem" value=True>
+              <label for="Q_Lab_chem">Chemistry</label><br>
+              <input type="checkbox" id="Q_Lab_hemo" name="Q_Lab_hemo" value=True>
+              <label for="css">Hematology</label><br>
+              <input type="checkbox" id="Q_Lab_microB" name="Q_Lab_microB" value=True>
+              <label for="Q_Lab_microB">Microbiology</label><br>
+              <input type="checkbox" id="Q_Lab_trans" name="Q_Lab_trans" value=True>
+              <label for="Q_Lab_trans">Transfusion Services</label><br>
+              <input type="checkbox" id="Q_Lab_immuno" name="Q_Lab_immuno" value=True>
+              <label for="Q_Lab_immuno">Immunology</label><br>
+              <input type="checkbox" id="Q_Lab_surg_path" name="Q_Lab_surg_path" value=True>
+              <label for="Q_Lab_surg_path">Surgical Pathology</label><br>
+              <input type="checkbox" id="Q_Lab_cyto" name="Q_Lab_cyto" value=True>
+              <label for="Q_Lab_cyto">Cytology</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Care Units:</p>
+              <input type="checkbox" id="Q_branch_ICU" name="Q_branch_ICU" value=True>
+              <label for="Q_branch_ICU">Intensive Care Unit</label><br>
+              <input type="checkbox" id="Q_branch_CIC" name="Q_branch_CIC" value=True>
+              <label for="Q_branch_CIC">Coronary Intensive </label><br>
+              <input type="checkbox" id="Q_branch_BIC" name="Q_branch_BIC" value=True>
+              <label for="Q_branch_BIC">Burn Intensive </label><br>
+              <input type="checkbox" id="Q_branch_SIC" name="Q_branch_SIC" value=True>
+              <label for="Q_branch_SIC">Surgical Intensive </label><br>
+              <input type="checkbox" id="Q_branch_PsIC" name="Q_branch_PsIC" value=True>
+              <label for="Q_branch_PsIC">Pyschiatric Intensive </label><br>
+              <input type="checkbox" id="Q_branch_PeIC" name="Q_branch_PeIC" value=True>
+              <label for="Q_branch_PeIC">Pediatric Intensive </label><br>
+              <input type="checkbox" id="Q_branch_NIC" name="Q_branch_NIC" value=True>
+              <label for="Q_branch_NIC">Neonatal Intensive </label><br>
+              <input type="checkbox" id="Q_branch_TIC" name="Q_branch_TIC" value=True>
+              <label for="Q_branch_TIC">Trauma Intensive </label><br>
+              <input type="checkbox" id="Q_branch_DIC" name="Q_branch_DIC" value=True>
+              <label for="Q_branch_DIC">Detox Intensive </label><br>
+              <input type="checkbox" id="Q_branch_PrIC" name="Q_branch_PrIC" value=True>
+              <label for="Q_branch_PrIC">Premature Intensive </label><br>
+              <input type="checkbox" id="Q_branch_Nursery" name="Q_branch_Nursery" value=True>
+              <label for="Q_branch_Nursery">Nursery</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Cardiovascular Services:</p>
+              <input type="checkbox" id="Q_C_cath" name="Q_C_cath" value=True>
+              <label for="Q_C_cath">Cardiac Cath Lab</label><br>
+              <input type="checkbox" id="Q_C_rehab" name="Q_C_rehab" value=True>
+              <label for="Q_C_rehab">Caridac Rehab</label><br>
+              <input type="checkbox" id="Q_C_surgery" name="Q_C_surgery" value=True>
+              <label for="Q_C_surgery">Cardiac Surgery</label><br>
+              <input type="checkbox" id="Q_C_stenting" name="Q_C_stenting" value=True>
+              <label for="Q_C_stenting">Carotid Stenting</label><br>
+              <input type="checkbox" id="Q_C_interve" name="Q_C_interve" value=True>
+              <label for="javascript">Coronary Interventions</label><br>
+              <input type="checkbox" id="Q_C_electro" name="Q_C_electro" value=True>
+              <label for="javascript">Electrophysiology</label><br>
+              <input type="checkbox" id="Q_C_vas_interv" name="Q_C_vas_interv" value=True>
+              <label for="Q_C_vas_interv">Vascular Intervention</label><br>
+              <input type="checkbox" id="Q_C_vas_sur" name="Q_C_vas_sur" value=True>
+              <label for="Q_C_vas_sur">Vascular Surgery</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Emergency Services:</p>
+              <input type="checkbox" id="Q_EME_dept" name="Q_EME_dept" value=True>
+              <label for="Q_EME_dept">Emergency Department</label><br>
+              <input type="checkbox" id="Q_EME_ped_TC" name="Q_EME_ped_TC" value=True>
+              <label for="Q_EME_ped_TC">Pediatric Trauma Center</label><br>
+              <input type="checkbox" id="Q_EME_TC" name="Q_EME_TC" value=True>
+              <label for="Q_EME_TC">Trauma Center</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Neuroscience Services:</p>
+              <input type="checkbox" id="Q_N_EEG" name="Q_N_EEG" value=True>
+              <label for="Q_N_EEG">Electroencephalography</label><br>
+              <input type="checkbox" id="Q_N_sleep" name="Q_N_sleep" value=True>
+              <label for="Q_N_sleep">Sleep Studies</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Oncology Services:</p>
+              <input type="checkbox" id="Q_On_chemo" name="Q_On_chemo" value=True>
+              <label for="Q_On_chemo">Chemotherapy</label><br>
+              <input type="checkbox" id="Q_On_rad" name="Q_On_rad" value=True>
+              <label for="Q_On_rad">Radiation Therapy</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Organ Transplant Services:</p>
+              <input type="checkbox" id="Q_Or_heart" name="Q_Or_heart" value=True>
+              <label for="Q_Or_heart">Heart Transplant</label><br>
+              <input type="checkbox" id="Q_Or_intestinal" name="Q_Or_intestinal" value=True>
+              <label for="Q_Or_intestinal">Intestinal Transplant</label><br>
+              <input type="checkbox" id="Q_Or_kidney" name="Q_Or_kidney" value=True>
+              <label for="Q_Or_kidney">Kidney Transplant</label><br>
+              <input type="checkbox" id="Q_Or_liver" name="Q_Or_liver" value=True>
+              <label for="Q_Or_liver">Liver Transplant</label><br>
+              <input type="checkbox" id="Q_Or_lung" name="Q_Or_lung" value=True>
+              <label for="Q_Or_lung">Lung Transplant</label><br>
+              <input type="checkbox" id="Q_Or_pancreas" name="Q_Or_pancreas" value=True>
+              <label for="Q_Or_pancreas">Pancreas Transplant</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Orthopedic Services:</p>
+              <input type="checkbox" id="Q_Ortho_Arth" name="Q_Ortho_Arth" value=True>
+              <label for="Q_Ortho_Arth">Arthroscopy</label><br>
+              <input type="checkbox" id="Q_Ortho_JR" name="Q_Ortho_JR" value=True>
+              <label for="Q_Ortho_JR">Joint Replacement</label><br>
+              <input type="checkbox" id="Q_Ortho_spine" name="Q_Ortho_spine" value=True>
+              <label for="Q_Ortho_spine">Spine Surgery</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Radiology Services:</p>
+              <input type="checkbox" id="Q_R_com_T" name="Q_R_com_T" value=True>
+              <label for="Q_R_com_T">Computed Tomography</label><br>
+              <input type="checkbox" id="Q_R_com_TA" name="Q_R_com_TA" value=True>
+              <label for="Q_R_com_TA">Computed Tomography-Angiography</label><br>
+              <input type="checkbox" id="Q_R_dig_mamo" name="Q_R_dig_mamo" value=True>
+              <label for="Q_R_dig_mamo">Digital Mammography</label><br>
+              <input type="checkbox" id="Q_R_IMRT" name="Q_R_IMRT" value=True>
+              <label for="Q_R_IMRT">Intensity-Modulated Radiation Therapy</label><br>
+              <input type="checkbox" id="Q_R_MRA" name="Q_R_MRA" value=True>
+              <label for="Q_R_MRA">Magnetic Resonance Angiography</label><br>
+              <input type="checkbox" id="Q_R_MRI" name="Q_R_MRI" value=True>
+              <label for="Q_R_MRI">Magnetic Resonance Imaging</label><br>
+              <input type="checkbox" id="Q_R_PET" name="Q_R_PET" value=True>
+              <label for="Q_R_PET">Positron Emission Tomography</label><br>
+              <input type="checkbox" id="Q_R_SPECT" name="Q_R_SPECT" value=True>
+              <label for="Q_R_SPECT">Single Photon Emission Computerized Tomo.</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Rehabiliation Services:</p>
+              <input type="checkbox" id="Q_Re_phy" name="Q_Re_phy" value=True>
+              <label for="Q_Re_phy">Physical Therapy</label><br>
+              <input type="checkbox" id="Q_Re_sp" name="Q_Re_sp" value=True>
+              <label for="Q_Re_sp">Speech Therapy</label><br>
+
+            <br>
+          </div>
+          <div class="beds" style="text-align:left">
+            <p>Special care:</p>
+              <input type="checkbox" id="Q_Sp_BICU" name="Q_Sp_BICU" value=True>
+              <label for="Q_Sp_BICU">Burn Intensive </label><br>
+              <input type="checkbox" id="Q_Sp_CCU" name="Q_Sp_CCU" value=True>
+              <label for="Q_Sp_CCU">Coronary Intensive </label><br>
+              <input type="checkbox" id="Q_Sp_det" name="Q_Sp_det" value=True>
+              <label for="Q_Sp_det">Detox Intensive </label><br>
+              <input type="checkbox" id="Q_Sp_ICU" name="Q_Sp_ICU" value=True>
+              <label for="Q_Sp_ICU">Intensive Care </label><br>
+              <input type="checkbox" id="Q_Sp_NIC" name="Q_Sp_NIC" value=True>
+              <label for="Q_Sp_NIC">Neonatal Intensive </label><br>
+              <input type="checkbox" id="Q_Sp_PeIC" name="Q_Sp_PeIC" value=True>
+              <label for="Q_Sp_PeIC">Pediatric Intensive </label><br>
+            <input type="checkbox" id="Q_Sp_PrIC" name="Q_Sp_PrIC" value=True>
+              <label for="Q_Sp_PrIC">Premature Intensive </label><br>
+              <input type="checkbox" id="Q_Sp_PsIC" name="Q_Sp_PsIC" value=True>
+              <label for="Q_Sp_PsIC">Pyschiatric Intensive </label><br>
+              <input type="checkbox" id="Q_Sp_SICU" name="Q_Sp_SICU" value=True>
+              <label for="Q_Sp_SICU">Surgical Intensive </label><br>
+              <input type="checkbox" id="Q_Sp_TCU" name="Q_Sp_TCU" value=True>
+              <label for="Q_Sp_TCU">Trauma Intensive </label><br>
+             
+            <br>
+          </div>
+        </div>
+
+        <button class="btn btn-main-2 btn-icon btn-round-full mx-auto" type='submit' herf="#showresults" target="#showresults" id="btnclick">Check for Available Hospitals</button>
+      </form>
+    </div>
+
+  </section>
+  <section class="availableHospitals"  style='width: auto; margin: 10px 50px'>
+    <div id="hospitals" id="showresults" class=' d-flex gap-5'>
+      {% for hospital in searched_hospitals %}
+      <div class="card1" style="width: 18rem">
+        <img {% load static %} src="{% static "niramaya/images/hospital1.jpeg"%}" class="card-img-top" alt="..." />
+        <div class="card-body" style='aling-text:left; padding: 10px 0;'>
+          <h5 class="card-title">{{hospital.hospital_name}}</h5>
+          <p class="card-title d-flex flex-row gap-2 align-items-center">Serial:{{hospital.serial}} | <span style='background:red; border-radius:3px; padding:5px;'> Level:{{hospital.Level}} </span></p>
+          <p class="card-title"><span>{{hospital.address}}</span> | <span>{{hospital.district}}</span> |<span>{{hospital.State}}</span></p>
+
+          <p class="card-text">
+          <p class="card-title my-2"><span style='background:red; border-radius:3px; padding:1px;'> Doctors:{{hospital.doctor_nos}} </span></p>
+          <p class="card-title my-2"><span style='background:red; border-radius:3px; padding:1px;'> Genral Beds:{{hospital.gen_bed}} </span><span style='background:red; border-radius:3px; padding:1px;'> Special Beds:{{hospital.spec_bed}} </span><span style='background:red; border-radius:3px; padding:1px;'> Surgery Beds:{{hospital.surg_bed}} </span></p>
+          {% comment %} <p>
+            {% for facalities in query_sets %}
+
+          <p>{{hospital.facalities}}</p>
+
+          <span style='background:red; border-radius:3px; padding:1px;'> {{facalities}} </span>
+          {% if hospital.facalities %}
+
+
+          {% endif %}
+
+          {% endfor %}
+          </p> {% endcomment %}
+          </p>
+
+          <button href="#" class="btn btn-main-2 btn-icon btn-round-full" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{hospital.serial}}">Request Referral</button>
+        </div>
+      </div>
+
+      {% comment %} Modal {% endcomment %}
+      <div class="modal fade" id="exampleModal{{hospital.serial}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Patient Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="./refer_to" method="post" enctype="multipart/form-data">{% csrf_token %}
+              <label for="" class="fw-bold">Paitent Name</label>
+              <input type="text" placeholder="" name='paitent_name' id='paitent_name' class="form-control shadow-none" />
+
+              <label for="" class="fw-bold">Patient ID</label>
+              <input type="text" name='paitent_id' id='paitent_id' class="form-control shadow-none" />
+
+              <div class="input-group mb-3 my-3">
+                <input type="file" name='paitent_summary' id='paitent_summary' class="form-control shadow-none"  />
+                <label class="input-group-text bg-success" for="inputGroupFile02">Upload Patient Summary</label>
+              </div>
+
+              
+
+              <div class="mb-3">
+                <label for="" class="form-label fw-bold">Message</label>
+                <textarea class="form-control" name='request_message' id="request_message" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+            <input class="d-inline" name='referal_hospital' required type="checkbox" id='referal_hospital'  value={{hospital.serial}} />
+            <label  for="referal_hospital">authorised</label>
+          </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">
+                Send request
+              </button>
+            </form>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+{% load static %}
+{%block js%}
+<script>
+  {% comment %} function myFunction() {
+    var element = document.getElementById("hospitl");
+    element.classList.remove("hospitals");
+    element.classList.add("hospital1");
+  } {% endcomment %}
+
+  document.getElementById('btnclick').addEventListener('click', function () {
+    console.log('carry beta');
+    document.getElementById('hospitals').style.display = "flex";
+  })
+</script>
+{%endblock%}

@@ -1,0 +1,192 @@
+{% extends 'niramaya/basic.html' %} {% block tittle %} Register the hospital {%endblock %} {% block body %}
+
+<div class="container">
+  <div class="container my-5 hdsection">
+    <div
+      class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+    >
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">
+          Time to work for a greater cause.
+        </h1>
+        <p class="lead py-4">
+          Leading online Healthcare Management system for Government hospitals.
+        </p>
+        <div
+          class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+        >
+        <div class="mx-2">
+          {% if user.is_authenticated %}
+          <h2 class="nav-link active" style="color: rgb(19, 18, 18); display: inline">
+            Welcome {{request.user}}
+          </h2>
+          {% else %}
+          <a href="login">
+            <button type="button" class="btn btn-primary">Login</button>
+          </a>
+          {% endif %}
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img
+          class="hddimage"
+          {% load static %}
+          src="{% static "niramaya/images/hdimage1.jpeg" %}"
+          alt=""
+          class="rounded-lg-3"
+          width="780"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center my-5 mb-1 fw-bold">Our Team</h1>
+  <p class="text-center fs-1">Take a look at our team</p>
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18.9rem">
+        <img
+          src="{% static "/niramaya/images/dv.png" %}"
+          class="card-img-top"
+          alt="img"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center fw-bold">Divyansh Singh</h5>
+          <p class="card-text text-center">
+            Skilled in Logo Design, E-commerce, C++, Communication, and Shopify.
+            Strong education professional with a BTech+Mtech focused in Computer
+            Science from Jawaharlal Nehru University.
+          </p>
+          <a href="#" class="btn btn-primary"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="btn btn-primary"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="btn btn-primary"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18.9rem">
+        <img
+          src="{% static "/niramaya/images/vaibhav.png" %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center fw-bold">Vaibhav Tripathi</h5>
+          <p class="card-text text-center">
+            I have a strong grip on the PL's like C++ and Python. I have been
+            following web-Development closely and I have good knowledge of HTML,
+            CSS and ReactJs while still working on Java-Script.
+          </p>
+          <a href="#" class="btn btn-primary"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="btn btn-primary"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="btn btn-primary"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18.9rem">
+        <img
+          src="{% static "/niramaya/images/Prateek.png" %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center fw-bold">Prateek Yadav</h5>
+          <p class="card-text text-center">
+            I am very keen enthusiastic about entrepreneurship and start-ups and
+            been working with E-Cell IIT-Bombay as Campus Ambassador to create
+            an entrepreneurial culture at my college. I love to code.
+          </p>
+          <a href="#" class="btn btn-primary"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="btn btn-primary"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="btn btn-primary"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <hr class="my-4" />
+  <div class="row featurette d-md-flex align-items-center">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">
+        We work with you to address. <br />
+        <span class="text-muted">It’ll blow your mind.</span>
+      </h2>
+      <p class="lead">
+        Over the years, a wide range of developments and innovations in the
+        global IT arena have led to many new IT-enabled devices and services
+        being produced. Moreover, there is need for IT today, not just in urban
+        areas but rural regions as well.
+      </p>
+    </div>
+    <div class="col-md-5 d-flex justify-content-around">
+      <img
+        class="hdimages"
+        style='height:300px; width:300px; background-position: center; background-size: cover; background-repeat: no-repeat;'
+        src="{% static "/niramaya/images/hdimage.jpg" %}"
+        alt=""
+      />
+    </div>
+  </div>
+  <hr class="my-4" />
+  <div class="row featurette d-md-flex align-items-center">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">
+        Over 1000+ patients saved till now. <br />
+      </h2>
+      <p class="lead">
+        As a result, now government hospitals need to know about the system of
+        connecting with other hospitals.
+      </p>
+    </div>
+    <div class="col-md-5 d-flex justify-content-around order-md-1">
+      <img
+        src="{% static "/niramaya/images/hdimage2.jpeg" %}"
+        alt=""
+        class="hdimages"
+        style='height:300px; width:300px; background-position: center; background-size: cover; background-repeat: no-repeat;'
+      />
+    </div>
+  </div>
+  <hr class="my-4" />
+  <div class="row featurette d-md-flex align-items-center">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">
+        100+ Save Life Drive done till now with the government hospitals.
+        <br />
+        <span class="text-muted">Sky is the limit.</span>
+      </h2>
+      <p class="lead">
+        we are planning to extend to a wider range connecting all the government
+        hospitals together and forming a chain of hospitals always available for
+        the moment.
+      </p>
+    </div>
+    <div class="col-md-5 d-flex justify-content-around">
+      <img
+        src="{% static "/niramaya/images/hdimage3.jpeg" %}"
+        alt=""
+        class="hdimages"
+        style='height:300px; width:300px; background-position: center; background-size: cover; background-repeat: no-repeat;'
+      />
+    </div>
+  </div>
+  <hr class="my-4" />
+</div>
+{% endblock %} {% load static %} {%block js%}{%endblock%}

@@ -1,0 +1,122 @@
+{% extends 'niramaya/basic.html' %}
+
+{% block tittle %}
+
+Register the hospital
+
+{% endblock %}
+{% block body %}
+
+
+<div class="container border my-5">
+    <h2 class="text-center my-4">Incoming Hospital Requests</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm border">
+            <thead>
+                <tr>
+                    <th scope="col">Code</th>
+          <th scope="col">From Hospital Name</th>
+          <th scope="col">Request Date</th>
+          <th scope="col">Patient Name</th>
+          <th scope="col">Patient ID</th>
+          <th scope="col" class="text-center">Patient Summary</th>
+          <th scope="col" class="text-center">Request Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for request in incoming_hospital_referal_requests  %}
+                <tr>
+                    <td>{{request.refernce_sno}}</td>
+                    <td>{{request.user.username}}</td>
+                    <td>{{request.refernce_date}}</td>
+                    <td>{{request.patientName}}</td>
+                    <td >{{request.patientID}}</td>
+                    <td class="text-center">
+                        <a href="./media/{{request.patientInfo}}"><button class="btn btn-primary btn-round-full">
+                                View Report
+                            </button></a>
+                    </td>
+                    {% if request.acceptance == '2' %}
+                    <td class="text-center">
+                        <a href="#"><button class="btn btn-success btn-round-full {{request.acceptance}}" style="width: fit-content">
+                                Accepted
+                            </button></a>
+                    </td>
+                    {% elif request.acceptance == '3' %}
+                    <td class="text-center">
+                        <a href="#"><button class="btn btn-danger btn-round-full {{request.acceptance}}" style="width: fit-content">
+                                Rejected
+                            </button></a>
+                    </td>
+                    {% else  %}
+                    <td class="text-center">
+                        <a href="#"><button class="btn btn-secondary btn-round-full {{request.acceptance}}" style="width: fit-content">
+                                Pending
+                            </button></a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container border my-5">
+    <h2 class="text-center my-4">Outgoing Hospital Requests</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm border">
+            <thead>
+                <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">To Hospital Name</th>
+                    <th scope="col">Request Date</th>
+                    <th scope="col">Patient Name</th>
+                    <th scope="col" class="text-center">Patient ID</th>
+                    <th scope="col" class="text-center">Patient Summary</th>
+                    <th scope="col" class="text-center">Request Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for request in outgoing_hospital_referal_requests  %}
+                <tr>
+                    <td>{{request.refernce_sno}}</td>
+                    <td>{{request.refernce_hospital.hospital_name}}</td>
+                    <td>{{request.refernce_date}}</td>
+                    <td>{{request.patientName}}</td>
+                    <td class="text-center">{{request.patientID}}</td>
+                    <td class="text-center">
+                        <a href="./media/{{request.patientInfo}}"><button class="btn btn-primary btn-round-full {{request.acceptance}}">
+                                View Report
+                            </button></a>
+                    </td>
+                    
+                    {% if request.acceptance == '2' %}
+                    <td class="text-center">
+                        <a href="#"><button class="btn btn-success btn-round-full {{request.acceptance}}" style="width: fit-content">
+                                Accepted
+                            </button></a>
+                    </td>
+                    {% elif request.acceptance == '3' %}
+                    <td class="text-center">
+                        <a href="#"><button class="btn btn-danger btn-round-full {{request.acceptance}}" style="width: fit-content">
+                                Rejected
+                            </button></a>
+                    </td>
+                    {% else  %}
+                    <td class="text-center">
+                        <a href="#"><button class="btn btn-secondary btn-round-full {{request.acceptance}}" style="width: fit-content">
+                                Pending
+                            </button></a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{%endblock%}
+{% load static %}
+{%block js%}
+{% endblock %}

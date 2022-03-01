@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 2rem;
+  font-family: "Exo", sans-serif;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.35s ease;
+}
+
+.btn.btn-icon i {
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+  padding-left: 15px;
+}
+
+.btn:focus {
+  outline: 0px;
+  box-shadow: none;
+}
+
+.btn-main {
+  background: #223a66;
+  color: #fff;
+  border-color: #223a66;
+}
+
+.btn-main:hover {
+  background: #e12454;
+  border-color: #e12454;
+  color: #fff;
+}
+
+.btn-main-2 {
+  background: #e12454;
+  color: #fff;
+  border-color: #e12454;
+}
+
+.btn-main-2:hover {
+  background: #223a66;
+  color: #fff;
+  border-color: #223a66;
+}
+
+.btn-solid-border {
+  border: 2px solid #223a66;
+  background: transparent;
+  color: #223a66;
+}
+
+.btn-solid-border:hover {
+  border: 2px solid #223a66;
+  color: #fff;
+  background: #223a66;
+}
+
+.btn-solid-border:hover.btn-icon i {
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.btn-solid-border.btn-icon i {
+  border-left: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.btn-transparent {
+  background: transparent;
+  color: #222;
+  border-color: #6f8ba4;
+}
+
+.btn-transparent:hover {
+  background: #6f8ba4;
+  color: #fff;
+}
+
+.btn-white {
+  background: #fff;
+  border-color: #fff;
+  color: #222;
+}
+
+.btn-white:hover {
+  background: #223a66;
+  color: #fff;
+  border-color: #223a66;
+}
+
+.btn-solid-white {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-solid-white:hover {
+  background: #fff;
+  color: #222;
+}
+
+.btn-round {
+  border-radius: 4px;
+}
+
+.btn-round-full {
+  border-radius: 50px;
+}
+
+.btn.active:focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 0;
+}
+
+.patientDetails {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.required {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  /* grid-row-gap: 2vw; */
+}
+.beds {
+  /* margin-top: 5px; */
+  margin-left: 5px;
+  padding: 5px;
+}
+.patientform {
+  border: 2px solid palevioletred;
+  width: 80vw;
+  margin-left: 90px;
+  margin-top: 40px;
+  padding: 20px;
+  font: inherit;
+  font-weight: 900;
+  color: #000;
+}
+
+.button {
+  background-color: palevioletred;
+  
+}
+.patientHeading{
+  margin: 30vw;
+  margin-bottom: 200px;
+  text-align: center;
+  font-size: large;
+  font-size: 30px;
+}
+
+.requirement {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+}
+
+#cars {
+  margin-left: 20px;
+  width: 400px;
+  background-color: rgb(194, 194, 194);
+  color: palevioletred;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+.btn1 {
+  margin-bottom: 30px;
+}
+.hospital {
+  display: none;
+}
+
+#btnclick {
+  margin-left: 25vw;
+}
+.card1 {
+  opacity: 1;
+}
+.card2 {
+  opacity: 1;
+}
+.card3 {
+  opacity: 1;
+}
+.card4 {
+  opacity: 1;
+}
+
+button {
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.card-img-top {
+  width: 300px;
+  height: 200px;
+}
+
+.profileimg {
+  height: 45px;
+  width: 50px;
+  border-radius: 30%;
+}
+.profile {
+  margin-right: 10px;
+}
+
+.btn-danger {
+  margin-top: 12px;
+}
+
+.disabled {
+  margin-left: 8px;
+}
+
+button.btn-hr {
+  padding: 10px;
+  border: 2px solid transparent;
+  margin: 3px;
+  background: #e12454;
+  color: #fff;
+  border-color: #e12454;
+}
+
+button.btn-rs {
+  padding: 10px;
+  border: 2px solid transparent;
+  margin: 3px;
+  box-shadow: none;
+}

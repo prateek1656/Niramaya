@@ -1,0 +1,61 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+>
+  Launch Modal
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Patient Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <label for="" class="fw-bold">Paitent Name</label>
+        <input type="text" placeholder="" class="form-control shadow-none" />
+
+        <label for="" class="fw-bold">Patient ID</label>
+        <input type="text" class="form-control shadow-none" />
+
+        <div class="input-group mb-3 my-3">
+          <input
+            type="file"
+            class="form-control shadow-none"
+            id="inputGroupFile02"
+          />
+          <label class="input-group-text bg-success" for="inputGroupFile02"
+            >Upload</label
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label fw-bold">Message</label>
+          <textarea class="form-control" id="" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Dismiss
+        </button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

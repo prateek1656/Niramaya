@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
+  <meta name="author" content="themefisher.com">
+
+  <title>Novena- Health & Care Medical template</title>
+  <script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/hackaweb/niramaya/static/niramaya/css/style.css">
+  <style>
+    .hospital1 {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px;
+      flex-wrap: wrap;
+    }
+  </style>
+  <!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+  <script src="https://kit.fontawesome.com/321e2dcd1b.js" crossorigin="anonymous"></script>
+  <script>
+
+    
+    function myFunction() {
+      var element = document.getElementById("hospitl");
+      element.classList.remove("hospitals");
+      element.classList.add("hospital1");
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="color: aliceblue" href="/niramaya/templates/niramaya/index.html">Niramaya</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: aliceblue" href="/niramaya/templates/niramaya/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: aliceblue" href="/niramaya/templates/niramaya/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: aliceblue" href="/contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color: aliceblue" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Features
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="/niramaya/templates/niramaya/x.html">Hospital Registration</a>
+                </li>
+                <li>
+                  <a class="dropdown-item nav-link disabled" href="/niramaya/templates/niramaya/request.html">Referral Requests</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="error-404.html">More content coming soon</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-8 d-grid gap-2 d-md-flex justify-content-md-end">
+        <div class="mx-2">
+          <button type="button" class="profile">
+            <img class="profileimg" src="/hackaweb/niramaya/static/niramaya/images/profile.jpeg" alt="profile">
+          </button>
+          <button class="btn btn-danger" data-toggle="modal" data-target="#modalSignin">
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="patientDetails">
+    <div class="patientform">
+      <span class="patientHeading">Query Search</span>
+      <form>
+        <div class="required">
+          <div class="beds">
+            <p>Please select Bed type:</p>
+              <input type="checkbox" id="Q_branch_available_gen_beds" name="fav_language" value="branch_available_gen_beds">
+              <label for="Q_branch_available_gen_beds">General Beds</label><br>
+              <input type="checkbox" id="Q_branch_available_spec_beds" name="fav_language" value="branch_available_spec_beds">
+              <label for="Q_branch_available_spec_beds">Special Beds</label><br>
+              <input type="checkbox" id="Q_branch_available_srg_beds" name="fav_language" value="branch_available_srg_beds">
+              <label for="Q_branch_available_srg_beds">Surgical Beds</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Lab type:</p>
+              <input type="checkbox" id="Q_Lab_chem" name="fav_language" value="Lab_chem">
+              <label for="Q_Lab_chem">Chemistry</label><br>
+              <input type="checkbox" id="Q_Lab_hemo" name="fav_language" value="Lab_hemo">
+              <label for="css">Hematology</label><br>
+              <input type="checkbox" id="Q_Lab_microB" name="fav_language" value="Lab_microB">
+              <label for="Q_Lab_microB">Microbiology</label><br>
+              <input type="checkbox" id="Q_Lab_trans" name="fav_language" value="Lab_trans">
+              <label for="Q_Lab_trans">Transfusion Services</label><br>
+              <input type="checkbox" id="Q_Lab_immuno" name="fav_language" value="Lab_immuno">
+              <label for="Q_Lab_immuno">Immunology</label><br>
+              <input type="checkbox" id="Q_Lab_surg_path" name="fav_language" value="Lab_surg_path">
+              <label for="Q_Lab_surg_path">Surgical Pathology</label><br>
+              <input type="checkbox" id="Q_Lab_cyto" name="fav_language" value="Lab_cyto">
+              <label for="Q_Lab_cyto">Cytology</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Cardiovascular Services:</p>
+              <input type="checkbox" id="Q_C_cath" name="fav_language" value="C_cath">
+              <label for="Q_C_cath">Cardiac Cath Lab</label><br>
+              <input type="checkbox" id="Q_C_rehab" name="fav_language" value="C_rehab">
+              <label for="Q_C_rehab">Caridac Rehab</label><br>
+              <input type="checkbox" id="Q_C_surgery" name="fav_language" value="C_surgery">
+              <label for="Q_C_surgery">Cardiac Surgery</label><br>
+              <input type="checkbox" id="Q_C_stenting" name="fav_language" value="C_stenting">
+              <label for="Q_C_stenting">Carotid Stenting</label><br>
+              <input type="checkbox" id="Q_C_interve" name="fav_language" value="C_interve">
+              <label for="Q_C_interve">Coronary Interventions</label><br>
+              <input type="checkbox" id="Q_C_electro" name="fav_language" value="C_electro">
+              <label for="Q_C_electro">Electrophysiology</label><br>
+              <input type="checkbox" id="Q_C_vas_interv" name="fav_language" value="C_vas_intervt">
+              <label for="Q_C_vas_interv">Vascular Intervention</label><br>
+              <input type="checkbox" id="Q_C_vas_sur" name="fav_language" value="C_vas_sur">
+              <label for="Q_C_vas_sur">Vascular Surgery</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Emergency Services:</p>
+              <input type="checkbox" id="Q_EME_dept" name="fav_language" value="EME_dept">
+              <label for="Q_EME_dept">Emergency Department</label><br>
+              <input type="checkbox" id="Q_EME_ped_TC" name="fav_language" value="EME_ped_TC">
+              <label for="Q_EME_ped_TC">Pediatric Trauma Center</label><br>
+              <input type="checkbox" id="Q_EME_TC" name="fav_language" value="EME_TC">
+              <label for="Q_EME_TC">Trauma Center</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Neuroscience type:</p>
+              <input type="checkbox" id="Q_N_EEG" name="fav_language" value="N_EEG">
+              <label for="Q_N_EEG">Electroencephalography</label><br>
+              <input type="checkbox" id="Q_N_sleep" name="fav_language" value="N_sleep">
+              <label for="Q_N_sleep">Sleep Studies</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Oncology Services:</p>
+              <input type="checkbox" id="Q_On_chemo" name="fav_language" value="On_chemo">
+              <label for="Q_On_chemo">Chemotherapy</label><br>
+              <input type="checkbox" id="Q_On_rad" name="fav_language" value="On_rad">
+              <label for="Q_On_rad">Radiation Therapy</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Organ Transplant field:</p>
+              <input type="checkbox" id="Q_Or_heart" name="fav_language" value="Or_heart">
+              <label for="Q_Or_heart">Heart Transplant</label><br>
+              <input type="checkbox" id="Q_Or_intestinal" name="fav_language" value="Or_intestinal">
+              <label for="Q_Or_intestinal">Intestinal Transplant</label><br>
+              <input type="checkbox" id="Q_Or_kidney" name="fav_language" value="Or_kidney">
+              <label for="Q_Or_kidney">Kidney Transplant</label><br>
+              <input type="checkbox" id="Q_Or_liver" name="fav_language" value="Or_liver">
+              <label for="Q_Or_liver">Liver Transplant</label><br>
+              <input type="checkbox" id="Q_Or_lung" name="fav_language" value="Or_lung">
+              <label for="Q_Or_lung">Lung Transplant</label><br>
+              <input type="checkbox" id="Q_Or_pancreas" name="fav_language" value="Or_pancreas">
+              <label for="Q_Or_pancreas">Pancreas Transplant</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Orthopedic Services:</p>
+              <input type="checkbox" id="Q_Ortho_Arth" name="fav_language" value="Ortho_Arth">
+              <label for="Q_Ortho_Arth">Arthroscopy</label><br>
+              <input type="checkbox" id="Q_Ortho_JR" name="fav_language" value="Ortho_JR">
+              <label for="Q_Ortho_JR">Joint Replacement</label><br>
+              <input type="checkbox" id="Q_Ortho_spine" name="fav_language" value="Ortho_spine">
+              <label for="Q_Ortho_spine">Spine Surgery</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Radiology type:</p>
+              <input type="checkbox" id="Q_R_com_T" name="fav_language" value="R_com_T">
+              <label for="Q_R_com_T">Computed Tomography</label><br>
+              <input type="checkbox" id="Q_R_com_TA" name="fav_language" value="R_com_TA">
+              <label for="Q_R_com_TA">Computed Tomography-Angiography</label><br>
+              <input type="checkbox" id="Q_R_dig_mamo" name="fav_language" value="R_dig_mamo">
+              <label for="Q_R_dig_mamo">Digital Mammography</label><br>
+              <input type="checkbox" id="Q_R_IMRT" name="fav_language" value="R_IMRT">
+              <label for="Q_R_IMRT">Intensity-Modulated Radiation Therapy</label><br>
+              <input type="checkbox" id="Q_R_MRA" name="fav_language" value="R_MRA">
+              <label for="Q_R_MRA">Magnetic Resonance Angiography</label><br>
+              <input type="checkbox" id="Q_R_MRI" name="fav_language" value="R_MRI">
+              <label for="Q_R_MRI">Magnetic Resonance Imaging</label><br>
+              <input type="checkbox" id="Q_R_PET" name="fav_language" value="R_PET">
+              <label for="Q_R_PET">Positron Emission Tomography</label><br>
+              <input type="checkbox" id="Q_R_SPECT" name="fav_language" value="R_SPECT">
+              <label for="Q_R_SPECT">Single Photon Emission Computerized Tomo.</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Rehabiliation Services:</p>
+              <input type="checkbox" id="Q_Re_phy" name="fav_language" value="Re_phy">
+              <label for="Q_Re_phy">Physical Therapy</label><br>
+              <input type="checkbox" id="Q_Re_sp" name="fav_language" value="Re_sp">
+              <label for="Q_Re_sp">Speech Therapy</label><br>
+
+            <br>
+          </div>
+          <div class="beds">
+            <p>Please select Special care:</p>
+              <input type="checkbox" id="Q_Sp_BICU" name="fav_language" value="Sp_BICU">
+              <label for="Q_Sp_BICU">Burn Intensive Care</label><br>
+              <input type="checkbox" id="Q_Sp_CCU" name="fav_language" value="Sp_CCU">
+              <label for="Q_Sp_CCU">Coronary Intensive Care</label><br>
+              <input type="checkbox" id="Q_Sp_det" name="fav_language" value="Sp_det">
+              <label for="Q_Sp_det">Detox Intensive Care</label><br>
+              <input type="checkbox" id="Q_Sp_ICU" name="fav_language" value="Sp_ICU">
+              <label for="Q_Sp_ICU">Intensive Care Unit</label><br>
+              <input type="checkbox" id="Q_Sp_NIC" name="fav_language" value="Sp_NIC">
+              <label for="Q_Sp_NIC">Neonatal Intensive Care</label><br>
+              <input type="checkbox" id="Q_Sp_PeIC" name="fav_language" value="Sp_PeIC">
+              <label for="Q_Sp_PeIC">Pediatric Intensive Care</label><br>
+            <input type="checkbox" id="Q_Sp_PrIC" name="fav_language" value="Sp_PrIC">
+              <label for="Q_Sp_PrIC">Premature Intensive Care</label><br>
+              <input type="checkbox" id="Q_Sp_PsIC" name="fav_language" value="Sp_PsIC">
+              <label for="Q_Sp_PsIC">Pyschiatric Intensive Care</label><br>
+              <input type="checkbox" id="Q_Sp_SICU" name="fav_language" value="Sp_SICU">
+              <label for="Q_Sp_SICU">Surgical Intensive Care</label><br>
+              <input type="checkbox" id="Q_Sp_TCU" name="fav_language" value="Sp_TCU">
+              <label for="Q_Sp_TCU">Trauma Intensive Care</label><br>
+             
+            <br>
+          </div>
+        </div>
+
+        <button class="btn btn-main-2 btn-icon btn-round-full" id="btnclick" target="#showresults" onclick="myFunction()">Check for Available Hospitals</button>
+
+      </form>
+    </div>
+
+  </section>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Proceed with Selected Hospital!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure for referring a patient?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-main btn-icon btn-round-full" data-bs-dismiss="modal">Close</button>
+          <a href="#" class="btn btn-main-2 btn-icon btn-round-full">Yes Proceed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="availableHospitals" >
+    <div class="hospitals" id="hospitl">
+      <div class="card1" style="width: 18rem;">
+        <img src="/hackaweb/niramaya/static/niramaya/images/hospital1.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-main-2 btn-icon btn-round-full" data-bs-toggle="modal" data-bs-target="#exampleModal"> Request Referral</a>
+        </div>
+      </div>
+      <div class="card2" style="width: 18rem;">
+        <img src="/hackaweb/niramaya/static/niramaya/images/hospital2.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-main-2 btn-icon btn-round-full" data-bs-toggle="modal" data-bs-target="#exampleModal">Request Referral</a>
+        </div>
+      </div>
+      <div class="card3" style="width: 18rem;">
+        <img src="/hackaweb/niramaya/static/niramaya/images/hospital3.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-main-2 btn-icon btn-round-full" data-bs-toggle="modal" data-bs-target="#exampleModal">Request Referral</a>
+        </div>
+      </div>
+      <div class="card4" style="width: 18rem;">
+        <img src="/hackaweb/niramaya/static/niramaya/images/hospital3.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-main-2 btn-icon btn-round-full" data-bs-toggle="modal" data-bs-target="#exampleModal">Request Referral</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="py-3 my-4 bg-dark mb-0">
+    <ul class="nav justify-content-center pb-1 mb-0">
+      <li class="nav-item">
+        <a href="/index.html" class="nav-link px-2">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html" class="nav-link px-2">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link px-2">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a href="blog.html" class="nav-link px-2">Blog</a>
+      </li>
+    </ul>
+    <ul class="nav justify-content-center pb-2 list-unstyled">
+      <li class="ms-3">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </li>
+      <li class="ms-3">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li class="ms-3">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </li>
+    </ul>
+    <hr class="mx-4 px-4" / style="color: white;">
+    <p class="text-center text-muted">
+      Coyright © 2022 | Niramaya Healthcare | All rights reserved.
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+
+</html>

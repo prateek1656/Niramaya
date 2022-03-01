@@ -1,0 +1,76 @@
+{% extends 'niramaya/basic.html' %} {% block tittle %} Register the hospital
+{%endblock %} {% block body %} {% comment %}
+<!-- -----------Hospital Request---------------- -->
+{% endcomment %}
+
+<div class="container my-5" >
+  <h2 style="margin: 50px auto 0;">Hospital Requests</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">From Hospital Name</th>
+          <th scope="col">Request Date</th>
+          <th scope="col">Patient Name</th>
+          <th scope="col">Patient ID</th>
+          <th scope="col">Message</th>
+          <th scope="col" class="text-center">Patient Summary</th>
+          <th scope="col" class="text-center">Request</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for request in hospital_referal_requests %}
+        <tr class="" style="border: 0; width: 1296px;">
+          <td class=" mx-auto" style="border: 0; padding: 20px 0;">{{request.refernce_sno}}</td>
+          <td style="border: 0; padding: 20px 0;">{{request.user.username}}</td>
+          <td style="border: 0; padding: 20px 0;">{{request.refernce_date}}</td>
+          <td style="border: 0; padding: 20px 0;">{{request.patientName}}</td>
+          <td style="border: 0; padding: 20px 0;">{{request.patientID}}</td>
+          <td style="border: 0; padding: 20px 0; max-width: 200px;">{{request.message}}</td>
+          <td class="text-center" style="border: 0; padding: 20px 0;" >
+            <a href="./media/{{request.patientInfo}}"><button class="btn-hr btn-main-2 btn-round-full">
+                View Patient Summary
+              </button></a>
+          </td>
+          <td class="text-center d-flex gap-2 justify-content-center" style="border: 0; padding: 20px 0;" >
+            <form action="./refer_acceptance" method="post">
+              {% csrf_token %}
+              <input class="d-none" name="referal_code" id="referal_code" value="{{request.refernce_sno}}" />
+              <a href="#"><button class="btn-rs btn-success btn-round-full" style="width: 50px" type="submit">
+                  <input class="d-none" name="referal_acceptance" id="referal_acceptance" value="2" />
+                  <i class="fas fa-check"></i></button></a>
+            </form>
+            <form action="./refer_acceptance" method="post">
+              {% csrf_token %}
+              <input class="d-none" name="referal_code" id="referal_code" value="{{request.refernce_sno}}" />
+              <a href="#"><button class="btn-rs btn-danger btn-round-full" style="width: 50px" type="submit">
+                  <input class="d-none" name="referal_acceptance" id="referal_acceptance" value="3" />
+                  <i class="fas fa-times"></i></button></a>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% comment %}
+<!-- ----------------quote----------------- -->
+{% endcomment %}
+<section class="section about-page">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="text-center">
+          “In almost every profession - whether it's law or journalism, finance
+          or medicine or academia or running a small business - people rely on
+          confidential communications to do their jobs. We count on the space of
+          trust that confidentiality provides.”
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %} {%block js%}{%endblock%}

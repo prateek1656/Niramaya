@@ -1,0 +1,133 @@
+{% extends 'niramaya/basic.html' %}
+
+{% block tittle %} 
+
+Register the hospital
+
+{% endblock %}
+{% block body %} 
+
+<div class="container my-5">
+    <form action="" style="display:flex; flex-direction:column; gap:20px; width: 70%; margin: 0 auto;">
+        <h1>Register The Hospital</h1>
+    
+        <!-- type as details vary -->
+        <h3>Basic Details</h3>
+        <input name="name" id="brach_name"  placeholder="Enter the name of branch"></input>
+        <input name="serial" id="brach_serial"  placeholder="Enter the serial no of branch"></input>
+        <input name="Level" id="hospital_level"  placeholder="Enter the name of head of branch"></input>
+        <input name="address" id="branc_add"  placeholder="Enter the Address of branch"></input>
+        <input name="state" id="brach_state"  placeholder="Enter the state of branch"></input>
+        <input name="district" id="brach_district"  placeholder="Enter the district of  branch"></input>
+        <input name="phone" id="brach_phone"  placeholder="Enter the phone of branch"></input>
+        <input name="head" id="brach_head"  placeholder="Enter the name of head of branch"></input>
+    
+    
+        <!-- type intigers -->
+        <h3>Working Staff Details</h3>
+        <input name="total_Doctors" id="brach_doctors"  placeholder="Enter the number of beads in branch"></input>
+        <input name="total_Skilled" id="brach_skilled"  placeholder="Enter the number of beads in branch"></input>
+        <input name="total_NonSkilled" id="brach_NonSkilled"  placeholder="Enter the number of beads in branch"></input>
+    
+    
+        <!-- type integers -->
+        <h3>Beds</h3>
+        <input name="genral_beds" id="brach_gen_bed"  placeholder="Enter the number of beads in branch"></input>
+        <input name="special_beds" id="brach_special_bed"  placeholder="Enter the number of beads in branch"></input>
+        <input name="srg_beds" id="brach_srg_bed"  placeholder="Enter the number of beads in branch"></input>
+        <input name="available_gen_beds" id="branch_available_gen_beds"  placeholder="Enter the number of beads in branch"></input>
+        <input name="available_spec_beds" id="branch_available_spec_beds"  placeholder="Enter the number of beads in branch"></input>
+        <input name="available_srg_beds" id="branch_available_srg_beds"  placeholder="Enter the number of beads in branch"></input>
+    
+    
+        <!-- type integers -->
+        <h3>Care Units</h3>
+        <input name="ICU_units" id="branch_ICU"  placeholder="Enter the number of beads in branch"></input>
+        <input name="CIC_units" id="branch_CIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="BIC_units" id="branch_BIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="SIC_units" id="branch_SIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="PsIC_units" id="branch_PsIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="PeIC_units" id="branch_PeIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="NIC_units" id="branch_NIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="TIC_units" id="branch_TIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="DIC_units" id="branch_DIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="PrIC_units" id="branch_PrIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="Nursery_units" id="branch_Nursery"  placeholder="Enter the number of beads in branch"></input>
+        
+    
+        <!-- type checkbox along labels -->
+        <h2>Labs</h2>
+        <input name="" id="Lab_chem"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Lab_hemo"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Lab_microB"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Lab_trans"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Lab_immuno"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Lab_surg_path"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Lab_cyto"  placeholder="Enter the number of beads in branch"></input>
+    
+    
+        <!-- type checkbox along labels -->
+        <h2>Services</h2>
+        <h4>Cardiovascular services</h4>
+        <input name="" id="C_cath"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="C_rehab"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="C_surgery"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="C_stenting"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="C_interve"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="C_electro"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="C_vas_interv"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="C_vas_sur"  placeholder="Enter the number of beads in branch"></input>
+        <h4>RadioLogy</h4>
+        <input name="" id="R_com_T"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="R_com_TA"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="R_dig_mamo"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="R_IMRT"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="R_MRA"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="R_MRI"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="R_PET"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="R_SPECT"  placeholder="Enter the number of beads in branch"></input>
+        <h4>Rehabiliation</h4>
+        <input name="" id="Re_phy"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Re_sp"  placeholder="Enter the number of beads in branch"></input>
+        <h4>Emergency</h4>
+        <input name="" id="EME_dept"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="EME_ped_TC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="EME_TC"  placeholder="Enter the number of beads in branch"></input>
+        <h4>Neuro</h4>
+        <input name="" id="N_EEG"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="N_sleep"  placeholder="Enter the number of beads in branch"></input>
+        <h4>speical</h4>
+        <input name="" id="Sp_BICU"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_CCU"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_det"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_ICU"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_NIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_PeIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_PrIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_PsIC"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_SICU"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Sp_TCU"  placeholder="Enter the number of beads in branch"></input>
+        <h4>Oncology</h4>
+        <input name="" id="On_chemo"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="On_rad"  placeholder="Enter the number of beads in branch"></input>
+        <h4>Organ transplant</h4>
+        <input name="" id="Or_heart"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Or_intestinal"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Or_kidney"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Or_liver"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Or_lung"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Or_pancreas"  placeholder="Enter the number of beads in branch"></input>
+        <h4>Orthopedic</h4>
+        <input name="" id="Ortho_Arth"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Ortho_JR"  placeholder="Enter the number of beads in branch"></input>
+        <input name="" id="Ortho_spine"  placeholder="Enter the number of beads in branch"></input>
+    
+        <button type="submit" class="btn btn-primary btn-round-full" style="height: 50px;  width: 100px; margin: 0 auto;">
+            Register
+        </button>
+        
+    </form>
+</div>
+  
+{% endblock %}
+
